@@ -1,0 +1,15 @@
+	// Print information about our objects
+	public static void printInfo() {
+		for (Item i : items)
+			System.out.println("We have " + i.getUnitsOnHand() + " " + i.getDescription() + "s on hand. They cost "
+					+ i.getPrice() + " each. We have a worth of $" + i.getWorth() + ".");
+		System.out.println("The total value of the Inventory is " + getValue());
+	}
+
+	// Get the total value of all items in our inventory
+	public static double getValue() {
+		double value = 0;
+		for (Item i : items)
+			value += i.getWorth();
+		return value;
+	}
